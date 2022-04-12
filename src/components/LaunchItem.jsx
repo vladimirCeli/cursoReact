@@ -1,4 +1,5 @@
 import { HiCalendar } from "react-icons/hi";
+import { Link } from 'react-router-dom'
 import {Box, Flex, Text, Spacer, Tag, Button, Icon } from '@chakra-ui/react'
 
 
@@ -25,7 +26,9 @@ export function LaunchItem(launch) {
               {launch.launch_date_local.split('T')[0]}
             </Text>
             </Flex>
+            <Link to={`/launch/${launch.flight_number}`}>
             <Button mt={2} colorScheme='purple'>More Datails</Button>
+            </Link>
          </Box>
     )
 }
